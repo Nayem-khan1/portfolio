@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { projectData } from "../data/projects";
 import { blogData } from "../data/blogs";
 import Hero from "../components/Hero";
+import Projects from "./Projects";
 
 const Home = () => {
   const projectsRef = useRef(null);
@@ -56,20 +57,7 @@ const Home = () => {
         ref={projectsRef}
         className="max-w-7xl mx-auto px-6 md:px-20 py-16"
       >
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-4xl font-serif font-bold text-primary mb-10 text-center"
-        >
-          Featured Projects
-        </motion.h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-          {projectData.slice(0, 3).map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
+        <Projects />
       </section>
 
       {/* Blogs Section */}
