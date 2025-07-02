@@ -31,7 +31,7 @@ const Footer = () => {
   return (
     <motion.footer
       ref={footerRef}
-      className="bg-[#0f172a] text-white px-6 py-12 md:px-20 shadow-inner mt-20"
+      className="text-white px-6 py-12 md:px-20 shadow-inner mt-20"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand */}

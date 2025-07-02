@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Banner from "../components/Banner";
 import ProjectCard from "../components/ProjectCard";
 import ContactForm from "../components/ContactForm";
 import BlogCard from "../components/BlogCard";

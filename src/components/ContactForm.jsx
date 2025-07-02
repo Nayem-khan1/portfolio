@@ -26,7 +26,7 @@ const ContactForm = () => {
     <motion.section
       ref={formRef}
       id="contact"
-      className="bg-[#0f172a] px-6 md:px-20 py-16 text-white"
+      className="px-6 md:px-20 py-16 text-white"
     >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-primary font-serif mb-6">
