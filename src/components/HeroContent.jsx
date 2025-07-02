@@ -12,17 +12,15 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className=" max-w-screen-2xl mx-auto md:flex md:flex-row md:items-center md:justify-center mt-50 md:mt-40 w-full z-[20]"
+      className=" max-w-screen-2xl mx-auto md:flex md:flex-row md:items-center md:justify-center mt-30 md:mt-40 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
-          className="hidden md:block Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+          className="hidden md:block Welcome-box py-[8px] px-[12px] border border-[#7042f88b] opacity-[0.9]"
         >
           <HiSparkles className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-[13px]">
-            Fullstack Developer Portfolio
-          </h1>
+          <h1 className="Welcome-text text-[13px]">Fullstack Developer</h1>
         </motion.div>
 
         <motion.div
@@ -76,7 +74,7 @@ const HeroContent = () => {
         <img
           src="/mainIconsdark.svg"
           alt="work icons"
-          className="max-w-[450px] h-auto"
+          className="md:max-w-[450px] xl:max-w-[600px] h-auto"
         />
       </motion.div>
     </motion.div>
