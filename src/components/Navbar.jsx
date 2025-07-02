@@ -1,42 +1,58 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Socials } from "../data/Socials";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { Link } from "react-router";
+
+const navLinks = [
+  { name: "Home", to: "home" },
+  { name: "Projects", to: "projects" },
+  { name: "Skills", to: "skills" },
+  { name: "About", to: "about" },
+  { name: "Blog", to: "blog" },
+  { name: "Contact", to: "contact" },
+];
 
 const Navbar = () => {
+  const navRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
-      <div className="max-w-screen-2xl mx-auto h-full flex flex-row items-center justify-between m-auto px-[10px]">
-        <a
-          href="#about-me"
-          className="h-auto w-auto flex flex-row items-center"
-        >
+    <div className="w-full fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4 md:px-10">
+      <div className="max-w-screen-2xl mx-auto h-[65px] flex items-center justify-between">
+        {/* Logo */}
+        <a href="#about-me" className="flex flex-row items-center">
           <img
             src="/NavLogo.png"
             alt="logo"
-            width={70}
-            height={70}
+            width={50}
+            height={50}
             className="cursor-pointer hover:animate-slowspin"
           />
-
-          <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-            Nayem Khan
-          </span>
+          <span className="font-bold ml-2 text-gray-300">Nayem Khan</span>
         </a>
 
-        <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <a href="#about-me" className="cursor-pointer">
-              About me
-            </a>
-            <a href="#skills" className="cursor-pointer">
-              Skills
-            </a>
-            <a href="#projects" className="cursor-pointer">
-              Projects
-            </a>
-          </div>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-6">
+          <ul className="flex gap-10 border border-[#7042f861] bg-[#0300145e] px-10 py-2 rounded-full text-sm text-gray-200">
+            {navLinks.map((link) => (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  activeClass="text-primary"
+                  className="cursor-pointer hover:text-primary transition font-semibold text-base"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <div className="flex flex-row gap-5">
+        <div className="hidden md:flex flex-row gap-4 ml-4">
           {Socials.map((social) => (
             <img
               src={social.src}
@@ -44,10 +60,59 @@ const Navbar = () => {
               key={social.name}
               width={24}
               height={24}
+              className="cursor-pointer hover:scale-110 transition"
             />
           ))}
         </div>
+
+        {/* Mobile Hamburger */}
+        <div
+          className="md:hidden text-white text-2xl cursor-pointer"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <HiX /> : <HiMenuAlt3 />}
+        </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {menuOpen && (
+        <div className="md:hidden bg-[#0300145e] py-4 space-y-4 text-center text-gray-100">
+          <a
+            href="#about-me"
+            className="block hover:text-primary"
+            onClick={() => setMenuOpen(false)}
+          >
+            About me
+          </a>
+          <a
+            href="#skills"
+            className="block hover:text-primary"
+            onClick={() => setMenuOpen(false)}
+          >
+            Skills
+          </a>
+          <a
+            href="#projects"
+            className="block hover:text-primary"
+            onClick={() => setMenuOpen(false)}
+          >
+            Projects
+          </a>
+
+          <div className="flex justify-center gap-5 pt-4">
+            {Socials.map((social) => (
+              <img
+                src={social.src}
+                alt={social.name}
+                key={social.name}
+                width={24}
+                height={24}
+                className="cursor-pointer hover:scale-110 transition"
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
