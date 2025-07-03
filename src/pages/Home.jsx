@@ -73,19 +73,19 @@ const Home = () => {
       <section
         id="projects"
         ref={projectsRef}
-        className=" max-w-screen-2xl mx-auto px-6 md:px-20 py-16"
+        className=" max-w-screen-2xl mx-auto px-4 md:px-10 py-16"
       >
         <Projects />
       </section>
       <section
         id="skills"
         ref={skillsRef}
-        className=" max-w-screen-2xl mx-auto px-6 md:px-20 py-16"
+        className=" max-w-screen-2xl mx-auto px-4 md:px-10 py-16"
       >
         <Skills />
       </section>
 
-      <section id="" className=" max-w-screen-2xl mx-auto px-6 md:px-20 py-16">
+      <section id="" className=" max-w-screen-2xl mx-auto px-4 md:px-10 py-16">
         <Encryption />
       </section>
 
@@ -93,7 +93,7 @@ const Home = () => {
       <section
         id="blog"
         ref={blogsRef}
-        className=" max-w-screen-2xl mx-auto px-6 md:px-20 py-16"
+        className=" max-w-screen-2xl mx-auto px-4 md:px-10 py-16"
       >
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

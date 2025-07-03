@@ -4,12 +4,12 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { Link } from "react-router";
 
 const navLinks = [
-  { name: "Home", to: "home" },
-  { name: "Projects", to: "projects" },
-  { name: "Skills", to: "skills" },
-  { name: "About", to: "about" },
-  { name: "Blog", to: "blog" },
-  { name: "Contact", to: "contact" },
+  { name: "Home", to: "/" },
+  { name: "Projects", to: "/projects" },
+  { name: "Skills", to: "/skills" },
+  { name: "About", to: "/about" },
+  { name: "Blog", to: "/blog" },
+  { name: "Contact", to: "/contact" },
 ];
 
 const Navbar = () => {
@@ -21,14 +21,14 @@ const Navbar = () => {
       <div className="max-w-screen-2xl mx-auto h-[65px] flex items-center justify-between">
         {/* Logo */}
         <a href="#about-me" className="flex flex-row items-center">
-          <img
+          {/* <img
             src="/NavLogo.png"
             alt="logo"
             width={50}
             height={50}
             className="cursor-pointer hover:animate-slowspin"
-          />
-          <span className="font-bold ml-2 text-gray-300">Nayem Khan</span>
+          /> */}
+          <span className="text-xl font-bold text-gray-300">Nayem Khan</span>
         </a>
 
         {/* Desktop Menu */}
