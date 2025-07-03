@@ -216,12 +216,6 @@ export const Full_stack = [
     height: 70,
   },
   {
-    skill_name: "Tauri",
-    Image: "/tauri.svg",
-    width: 70,
-    height: 70,
-  },
-  {
     skill_name: "Docker",
     Image: "/docker.webp",
     width: 70,
@@ -238,9 +232,9 @@ export const Full_stack = [
 
 export const Other_skill = [
   {
-    skill_name: "Go",
-    Image: "/go.png",
-    width: 60,
-    height: 60,
+    skill_name: "Express js",
+    Image: "/express.png",
+    width: 80,
+    height: 80,
   },
 ];
