@@ -33,7 +33,7 @@ const Footer = () => {
       ref={footerRef}
       className="text-white px-6 py-12 md:px-20 shadow-inner mt-20"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
           <h3 className="text-2xl font-bold text-primary font-serif mb-3">
