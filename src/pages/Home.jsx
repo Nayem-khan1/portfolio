@@ -8,15 +8,33 @@ import { projectData } from "../data/projects";
 import { blogData } from "../data/blogs";
 import Hero from "../components/Hero";
 import Projects from "./Projects";
+import Skills from "../components/Skills";
+import Encryption from "../components/Encryption";
 
 const Home = () => {
   const projectsRef = useRef(null);
   const blogsRef = useRef(null);
+  const skillsRef = useRef(null);
 
   useEffect(() => {
     // GSAP scroll reveal for projects section
     gsap.fromTo(
       projectsRef.current,
+      { y: 40, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: projectsRef.current,
+          start: "top 90%",
+        },
+      }
+    );
+    // GSAP scroll reveal for skill section
+    gsap.fromTo(
+      skillsRef.current,
       { y: 40, opacity: 0 },
       {
         y: 0,
@@ -58,6 +76,17 @@ const Home = () => {
         className="max-w-7xl mx-auto px-6 md:px-20 py-16"
       >
         <Projects />
+      </section>
+      <section
+        id="skills"
+        ref={skillsRef}
+        className="max-w-7xl mx-auto px-6 md:px-20 py-16"
+      >
+        <Skills />
+      </section>
+
+      <section id="" className="max-w-7xl mx-auto px-6 md:px-20 py-16">
+        <Encryption />
       </section>
 
       {/* Blogs Section */}

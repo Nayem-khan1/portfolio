@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Socials } from "../data/Socials";
+import { Socials } from "../data";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { Link } from "react-router";
 
