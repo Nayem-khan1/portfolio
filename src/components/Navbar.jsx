@@ -1,15 +1,15 @@
 import React, { useRef, useState } from "react";
 import { Socials } from "../data";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import { Link } from "react-router";
+import { Link } from "react-scroll";
 
 const navLinks = [
-  { name: "Home", to: "/" },
-  { name: "Projects", to: "/projects" },
-  { name: "Skills", to: "/skills" },
-  { name: "About", to: "/about" },
-  { name: "Blog", to: "/blog" },
-  { name: "Contact", to: "/contact" },
+  { name: "Home", to: "home" },
+  { name: "Projects", to: "projects" },
+  { name: "Skills", to: "skills" },
+  { name: "About", to: "about-me" },
+  { name: "Blog", to: "blog" },
+  { name: "Contact", to: "contact" },
 ];
 
 const Navbar = () => {
