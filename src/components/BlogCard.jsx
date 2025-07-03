@@ -40,9 +40,7 @@ const BlogCard = ({ blog }) => {
       {/* Content */}
       <div className="p-6 space-y-4">
         <div className="text-sm text-gray-400">{blog.date}</div>
-        <h3 className="text-xl font-bold text-primary font-serif">
-          {blog.title}
-        </h3>
+        <h3 className="text-xl font-bold text-primary">{blog.title}</h3>
         <p className="text-gray-300 text-sm line-clamp-3">{blog.excerpt}</p>
 
         {/* Button */}

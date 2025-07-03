@@ -99,7 +99,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl font-serif font-bold text-primary mb-10 text-center"
+          className="text-4xl font-bold text-primary mb-10 text-center"
         >
           Latest Blog Posts
         </motion.h2>
