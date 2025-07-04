@@ -4,7 +4,6 @@ import ContactForm from "../components/ContactForm";
 import BlogCard from "../components/BlogCard";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
-import { projectData } from "../data/projects";
 import { blogData } from "../data/blogs";
 import Hero from "../components/Hero";
 import Projects from "./Projects";
@@ -73,7 +72,7 @@ const Home = () => {
       <section
         id="projects"
         ref={projectsRef}
-        className=" max-w-screen-2xl mx-auto px-4 md:px-10 py-16 z-[20] relative "
+        className=" max-w-screen-2xl mx-auto z-[20] relative "
       >
         <Projects />
       </section>
@@ -96,7 +95,7 @@ const Home = () => {
       <section
         id="blog"
         ref={blogsRef}
-        className=" max-w-screen-2xl mx-auto px-4 md:px-10 py-16 z-[20] relative "
+        className=" max-w-screen-2xl mx-auto px-4 md:px-10 2xl:px-0 py-16 z-[20] relative "
       >
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
