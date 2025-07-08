@@ -9,10 +9,12 @@ import ProjectDetails from "./components/ProjectDetails";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import StarsCanvas from "./components/StarsCanvas";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route element={<Main />}>
           <Route element={<Home />} path="/" />

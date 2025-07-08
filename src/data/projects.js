@@ -1,32 +1,32 @@
 export const projectData = [
   {
-    title: "QR Code Generator SaaS",
-    slug: "qr-code-saas",
-    description:
-      "A full-featured SaaS web app to generate, customize, and track QR codes with user authentication and analytics dashboard.",
-    image: "/images/projects/qrcode-saas.png",
-    tech: ["React", "Node.js", "MongoDB", "Firebase", "Stripe"],
-    demo: "https://demo.example.com",
-    repo: "https://github.com/yourname/qr-code-saas",
-  },
-  {
     title: "Personal Portfolio Website",
     slug: "personal-portfolio",
     description:
-      "A responsive and modern portfolio website built with React and Tailwind CSS to showcase projects and skills.",
-    image: "/images/projects/portfolio.png",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    demo: "https://yourportfolio.com",
-    repo: "https://github.com/yourname/portfolio",
+      "A modern and responsive portfolio built with React, Tailwind CSS, Framer Motion, and GSAP. It showcases my projects, skills, blog, and contact form with elegant UI animations.",
+    image: "/image/projects/project-1.png",
+    tech: ["React", "Tailwind CSS", "Framer Motion", "GSAP"],
+    demo: "https://portfolio-blond-eight-77.vercel.app/",
+    repo: "https://github.com/Nayem-khan1/portfolio.git",
   },
   {
-    title: "E-commerce Platform",
+    title: "E-commerce Store",
     slug: "ecommerce-platform",
     description:
-      "A MERN stack e-commerce platform with product listing, cart, and payment integration.",
-    image: "/images/projects/ecommerce.png",
+      "A full-featured e-commerce website using React, Node.js, Express, and MongoDB. Includes product browsing, cart, checkout, cash-on-delivery, Stripe payment, and responsive UI.",
+    image: "/image/projects/project-2.png",
     tech: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-    demo: "https://ecommerce.example.com",
-    repo: "https://github.com/yourname/ecommerce-platform",
+    demo: "https://rong-bd-frontend.vercel.app/",
+    repo: "https://github.com/Nayem-khan1/rong-bd-frontend.git",
+  },
+  {
+    title: "Admin Dashboard",
+    slug: "admin-dashboard",
+    description:
+      "An intuitive admin panel to manage products, orders, and customers. Built using React, Chart.js, Tailwind CSS, and secure Express APIs for real-time store insights.",
+    image: "/image/projects/project-3.png",
+    tech: ["React", "Tailwind CSS", "Chart.js", "Express"],
+    demo: "https://rong-bd-admin.vercel.app/",
+    repo: "https://github.com/Nayem-khan1/rong-bd-admin.git",
   },
 ];

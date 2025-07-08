@@ -2,12 +2,12 @@ import React, { useRef, useState } from "react";
 import { Socials } from "../data";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { Link } from "react-scroll";
+import { Link as Route } from "react-router";
 
 const navLinks = [
-  { name: "Home", to: "home" },
+  { name: "About", to: "about-me" },
   { name: "Projects", to: "projects" },
   { name: "Skills", to: "skills" },
-  { name: "About", to: "about-me" },
   { name: "Blog", to: "blog" },
   { name: "Contact", to: "contact" },
 ];
@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className="w-full fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4 md:px-10">
       <div className="max-w-screen-2xl mx-auto h-[65px] flex items-center justify-between">
         {/* Logo */}
-        <a href="#about-me" className="flex flex-row items-center">
+        <Route to="/" className="flex flex-row items-center">
           {/* <img
             src="/NavLogo.png"
             alt="logo"
@@ -29,7 +29,7 @@ const Navbar = () => {
             className="cursor-pointer hover:animate-slowspin"
           /> */}
           <span className="text-xl font-bold text-gray-300">Nayem Khan</span>
-        </a>
+        </Route>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
