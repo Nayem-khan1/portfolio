@@ -7,7 +7,7 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Main = () => {
   return (
-    <div className="relative z-10 bg-[#030014] overflow-hidden">
+    <div className="bg-[#030014]">
       <StarsCanvas />
       <Navbar />
       <Outlet />
