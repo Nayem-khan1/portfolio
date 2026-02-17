@@ -1,129 +1,131 @@
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { skillsLevel1, skillsLevel2 } from "../data/skills";
 
 const About = () => {
   const aboutRef = useRef(null);
-  const educationRef = useRef(null);
+  const timelineRef = useRef(null);
   const skillsRef = useRef(null);
 
   useEffect(() => {
-    // GSAP reveal for all sections
-    gsap.fromTo(
-      aboutRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: aboutRef.current,
-          start: "top 90%",
-        },
-      }
-    );
-    gsap.fromTo(
-      educationRef.current,
-      { opacity: 0, x: -30 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: educationRef.current,
-          start: "top 90%",
-        },
-      }
-    );
-    gsap.fromTo(
-      skillsRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: skillsRef.current,
-          start: "top 90%",
-        },
-      }
-    );
+    if (aboutRef.current) {
+      gsap.fromTo(
+        aboutRef.current,
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+      );
+    }
+
+    if (timelineRef.current) {
+      gsap.fromTo(
+        timelineRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: 0.2,
+          ease: "power3.out",
+        }
+      );
+    }
+
+    if (skillsRef.current) {
+      gsap.fromTo(
+        skillsRef.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: 0.3,
+          ease: "power3.out",
+        }
+      );
+    }
   }, []);
 
   return (
     <main className="bg-[#0f172a] text-white min-h-screen px-6 md:px-20 py-16">
-      {/* Introduction */}
-      <section ref={aboutRef} className="max-w-4xl mx-auto mb-16 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6"
-        >
+      <section ref={aboutRef} className="max-w-5xl mx-auto mb-16 text-center">
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
           About Me
-        </motion.h1>
+        </h1>
         <p className="text-lg text-gray-300 leading-relaxed">
-          Hi! I’m <span className="text-primary font-semibold">Nayem Khan</span>
-          , a passionate MERN Stack developer focused on building fast,
-          user-friendly, and impactful web applications. I love solving
-          real-world problems with clean code and meaningful UI/UX.
+          I am Md. Nayem Khan, a Frontend Engineer (React | TypeScript) and a
+          full-stack MERN developer with 2+ years of experience. I build
+          scalable SaaS and e-commerce products with clean architecture,
+          reusable components, and high-performance UI.
         </p>
       </section>
 
-      {/* Education + Experience */}
       <section
-        ref={educationRef}
-        className="max-w-4xl mx-auto mb-16 grid md:grid-cols-2 gap-10"
+        ref={timelineRef}
+        className="max-w-6xl mx-auto mb-16 grid md:grid-cols-2 gap-10"
       >
-        <div>
-          <h2 className="text-2xl font-semibold text-primary font-serif mb-4">
-            🎓 Education
+        <div className="bg-[#111827] rounded-xl border border-gray-700 p-6">
+          <h2 className="text-2xl font-semibold text-primary mb-4">
+            Professional Experience
           </h2>
-          <div className="text-gray-300 space-y-3 text-sm">
+          <div className="space-y-6 text-gray-300 text-sm">
             <div>
-              <p className="font-medium text-white">B.Sc. in CSE</p>
-              <p>XYZ University, 2020 – 2024</p>
+              <p className="font-medium text-white">
+                Frontend Developer - FinoBytes
+              </p>
+              <p className="text-gray-400">Dhaka, Bangladesh | 09/2025 - Present</p>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li>Built multi-role dashboard (Member, Merchant, Admin).</li>
+                <li>Implemented QR-based registration and transaction flows.</li>
+                <li>Developed 30-level referral tree and voucher/point UI.</li>
+                <li>Integrated REST APIs with role-based route protection.</li>
+              </ul>
             </div>
             <div>
-              <p className="font-medium text-white">HSC</p>
-              <p>ABC College, 2018 – 2020</p>
+              <p className="font-medium text-white">
+                Junior Web Developer - Mojaru
+              </p>
+              <p className="text-gray-400">Dhaka, Bangladesh | 08/2023 - 01/2025</p>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li>Developed live class and course management UI in React.</li>
+                <li>Implemented authentication and role-based access control.</li>
+                <li>Collaborated with backend team through Redux and REST APIs.</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold text-primary font-serif mb-4">
-            💼 Experience
-          </h2>
-          <div className="text-gray-300 space-y-3 text-sm">
+        <div className="bg-[#111827] rounded-xl border border-gray-700 p-6">
+          <h2 className="text-2xl font-semibold text-primary mb-4">Education</h2>
+          <div className="text-gray-300 space-y-4 text-sm">
             <div>
               <p className="font-medium text-white">
-                MERN Stack Developer (Intern)
+                Bachelor&apos;s in Computer Science and Engineering (Ongoing)
               </p>
-              <p>Tech Solutions Ltd. – 6 Months</p>
+              <p>Bangladesh University of Business and Technology (BUBT)</p>
+              <p className="text-gray-400">Dhaka, Bangladesh | Present</p>
             </div>
-            <div>
-              <p className="font-medium text-white">Freelancer</p>
-              <p>Fiverr & Local Projects – 2+ Years</p>
-            </div>
+          </div>
+
+          <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">
+            Contact
+          </h2>
+          <div className="text-sm text-gray-300 space-y-1">
+            <p>Email: nayemkhan4496@gmail.com</p>
+            <p>Phone: +8801954496221</p>
+            <p>Location: Dhaka, Bangladesh</p>
           </div>
         </div>
       </section>
 
-      {/* Skills */}
-      <section ref={skillsRef} className="max-w-5xl mx-auto">
+      <section ref={skillsRef} className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-serif font-bold text-primary mb-8 text-center">
-          💻 My Skills
+          Skills
         </h2>
 
         <div className="grid md:grid-cols-2 gap-10 text-gray-300 text-sm">
-          <div>
+          <div className="bg-[#111827] rounded-xl border border-gray-700 p-6">
             <h3 className="text-lg font-semibold text-white mb-3">
-              🔰 Level 1 – Core Skills
+              Frontend and UI
             </h3>
             <ul className="space-y-2">
               {skillsLevel1.map((skill, idx) => (
@@ -131,16 +133,17 @@ const About = () => {
                   key={idx}
                   className="bg-[#1e293b] px-4 py-2 rounded-lg border border-gray-700"
                 >
-                  <span className="text-primary font-medium">{skill.name}</span>{" "}
-                  – {skill.level}
+                  <span className="text-primary font-medium">{skill.name}</span>
+                  {" - "}
+                  {skill.level}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
+          <div className="bg-[#111827] rounded-xl border border-gray-700 p-6">
             <h3 className="text-lg font-semibold text-white mb-3">
-              🚀 Level 2 – Advanced Tools
+              Backend, Auth, and Tools
             </h3>
             <ul className="space-y-2">
               {skillsLevel2.map((skill, idx) => (
@@ -148,8 +151,9 @@ const About = () => {
                   key={idx}
                   className="bg-[#1e293b] px-4 py-2 rounded-lg border border-gray-700"
                 >
-                  <span className="text-primary font-medium">{skill.name}</span>{" "}
-                  – {skill.level}
+                  <span className="text-primary font-medium">{skill.name}</span>
+                  {" - "}
+                  {skill.level}
                 </li>
               ))}
             </ul>

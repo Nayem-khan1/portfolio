@@ -1,11 +1,14 @@
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { gsap } from "gsap";
 
 const ContactForm = () => {
   const formRef = useRef(null);
 
   useEffect(() => {
+    if (!formRef.current) {
+      return;
+    }
+
     gsap.fromTo(
       formRef.current,
       { opacity: 0, y: 60 },
@@ -23,17 +26,18 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <motion.section
+    <section
       ref={formRef}
       id="contact"
-      className="px-6 md:px-20 py-16 text-white  z-[20] relative "
+      className="px-6 md:px-20 py-16 text-white z-[20] relative"
     >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-          Let's Connect
+          Let&apos;s Connect
         </h2>
         <p className="text-gray-400 mb-10">
-          Feel free to reach out via this form or email me directly.
+          Open to frontend and full-stack MERN opportunities. Send a message or
+          reach out directly.
         </p>
 
         <form
@@ -75,31 +79,32 @@ const ContactForm = () => {
               rows="5"
               required
               className="w-full px-4 py-3 bg-[#1e293b] border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-            ></textarea>
+            />
           </div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
+          <button
             type="submit"
             className="bg-primary text-black font-semibold px-6 py-3 rounded-full transition hover:bg-white hover:text-primary"
           >
             Send Message
-          </motion.button>
+          </button>
         </form>
 
-        {/* Optional direct contact info */}
-        <div className="mt-10 text-sm text-gray-400">
-          Or contact me at:{" "}
-          <a
-            href="mailto:nayem@email.com"
-            className="text-primary hover:underline"
-          >
-            nayem@email.com
-          </a>{" "}
-          | Phone: <span className="text-primary">+880 123456789</span>
+        <div className="mt-10 text-sm text-gray-400 space-y-2">
+          <p>
+            Email:{" "}
+            <a
+              href="mailto:nayemkhan4496@gmail.com"
+              className="text-primary hover:underline"
+            >
+              nayemkhan4496@gmail.com
+            </a>
+          </p>
+          <p>Phone: +8801954496221</p>
+          <p>Location: Dhaka, Bangladesh</p>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -1,26 +1,62 @@
 export const blogData = [
   {
-    title: "Understanding React Context API",
-    slug: "react-context-api",
+    title: "Building Multi-role Dashboards with React and Tailwind",
+    slug: "multi-role-dashboard-react-tailwind",
     image: "/image/blogs/2.png",
     excerpt:
-      "React Context API allows you to manage global state easily without prop drilling. This article explains how to use it effectively.",
-    date: "July 2, 2025",
+      "A practical breakdown of building Member, Merchant, and Admin dashboards with scalable UI architecture and clear role boundaries.",
+    date: "January 12, 2026",
+    content: {
+      paragraphs: [
+        "In multi-role products, the same design system should serve different permissions and workflows without duplicating code.",
+        "I focus on reusable layout shells, route-level guards, and modular feature components so each role can evolve independently.",
+        "At FinoBytes, this approach helped keep onboarding, transaction, and reporting interfaces consistent across Member, Merchant, and Admin views.",
+      ],
+      highlights: [
+        "Shared dashboard foundation with role-based feature toggles",
+        "Reusable table, form, and stats components",
+        "Tailwind-driven responsive design for desktop and mobile",
+      ],
+    },
   },
   {
-    title: "Getting Started with Tailwind CSS",
-    slug: "getting-started-tailwind-css",
+    title: "JWT Auth and Role-based Routing in MERN Apps",
+    slug: "jwt-auth-role-based-routing-mern",
     image: "/image/blogs/1.png",
     excerpt:
-      "Tailwind CSS is a utility-first CSS framework that makes styling easier and faster. Learn the basics and start building modern UI.",
-    date: "June 28, 2025",
+      "How I structure secure frontend route protection and token-aware UX for SaaS and e-commerce products.",
+    date: "December 3, 2025",
+    content: {
+      paragraphs: [
+        "JWT authentication is not only about login; it affects route flow, API handling, and session-aware rendering across the app.",
+        "I combine protected routes with role checks to prevent invalid UI states and keep business-critical pages restricted.",
+        "This pattern was essential for merchant/admin dashboards, where access level directly controls visible actions and data scope.",
+      ],
+      highlights: [
+        "Role guards at route and component levels",
+        "Secure token handling with API intercept patterns",
+        "Clear fallback UX for unauthorized states",
+      ],
+    },
   },
   {
-    title: "Building Responsive Websites",
-    slug: "building-responsive-websites",
+    title: "Scaling Frontend Architecture with Reusable Components",
+    slug: "scaling-frontend-architecture-reusable-components",
     image: "/image/blogs/3.png",
     excerpt:
-      "Responsive design ensures your website looks great on all devices. Discover the best practices and tools for building responsive sites.",
-    date: "June 20, 2025",
+      "Lessons from building fast, maintainable React interfaces with reusable components and API-driven UI patterns.",
+    date: "October 18, 2025",
+    content: {
+      paragraphs: [
+        "As projects grow, consistency and maintainability matter more than one-off UI speed.",
+        "I organize UI into reusable cards, layout wrappers, and form primitives so features ship quickly without sacrificing quality.",
+        "This keeps development predictable, improves collaboration with backend teams, and reduces regression risk.",
+      ],
+      highlights: [
+        "Component-first design for repeated workflows",
+        "Predictable folder structure and naming",
+        "Performance-focused rendering and asset handling",
+      ],
+    },
   },
 ];

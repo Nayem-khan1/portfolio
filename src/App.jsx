@@ -1,14 +1,13 @@
 import React from "react";
 import Home from "./pages/Home";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router";
+import { Routes, Route } from "react-router";
 import Main from "./layout/Main";
 import Blog from "./pages/Blog";
 import BlogDetails from "./pages/BlogDetails";
 import Projects from "./pages/Projects";
-import ProjectDetails from "./components/ProjectDetails";
+import ProjectDetails from "./pages/ProjectDetails";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import StarsCanvas from "./components/StarsCanvas";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 const App = () => {

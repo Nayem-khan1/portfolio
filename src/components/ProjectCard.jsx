@@ -17,29 +17,39 @@ const ProjectCard = ({ src, title, description, live, github, slug }) => {
         <p className="mt-2 text-gray-300">{description}</p>
       </div>
 
-      <div className="flex flex-wrap gap-4 px-4 pb-4">
-        <a
-          href={live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-1 button-primary text-white font-semibold rounded-2xl shadow-lg hover:bg-white hover:text-primary transition duration-300"
-        >
-          Live
-        </a>
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-1 border border-white text-white rounded-2xl hover:bg-white hover:text-[#0f172a] transition duration-300"
-        >
-          GitHub
-        </a>
+      <div className="flex flex-wrap gap-4 px-4 pb-4 items-center">
+        {live ? (
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-1 button-primary text-white font-semibold rounded-2xl shadow-lg hover:bg-white hover:text-primary transition duration-300"
+          >
+            Live
+          </a>
+        ) : null}
+
+        {github ? (
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-1 border border-white text-white rounded-2xl hover:bg-white hover:text-[#0f172a] transition duration-300"
+          >
+            GitHub
+          </a>
+        ) : null}
+
         <Link
           to={`/projects/${slug}`}
           className="px-4 py-1 border border-primary text-primary rounded-2xl hover:bg-primary hover:text-black transition duration-300"
         >
           Details
         </Link>
+
+        {!live && !github ? (
+          <span className="text-xs text-gray-400">Private project links</span>
+        ) : null}
       </div>
     </div>
   );
