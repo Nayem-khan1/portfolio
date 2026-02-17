@@ -21,7 +21,7 @@ const HeroContent = () => {
         >
           <HiSparkles className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Frontend Engineer (React | TypeScript)
+            Full-stack MERN Developer
           </h1>
         </motion.div>
 
@@ -32,7 +32,7 @@ const HeroContent = () => {
           <span>
             Hi, I&apos;m{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              Md. Nayem Khan
+              Nayem Khan
             </span>
           </span>
           <span className="text-lg md:text-2xl font-medium text-gray-300">
