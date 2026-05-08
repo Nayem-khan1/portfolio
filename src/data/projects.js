@@ -1,5 +1,48 @@
 export const projectData = [
   {
+    title: "Astronomy Pathshala - Official Website & Learning Platform",
+    slug: "astronomy-pathshala",
+    description:
+      "Designed a mobile-first, bilingual edtech platform for astronomy education in Bangladesh, covering course sales, live and recorded learning, student progress, events, certificates, and a future AI/SaaS roadmap.",
+    image: "/image/projects/astronomy_pathshala.png",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "MySQL",
+      "JWT",
+      "bKash/Nagad APIs",
+    ],
+    demo: "https://beta.astronomypathshala.com/",
+    repo: "",
+    overview:
+      "Astronomy Pathshala is planned as Bangladesh's primary digital astronomy education platform, combining public branding, course delivery, community engagement, and scalable learning operations for students, parents, instructors, and administrators.",
+    highlights: [
+      "Bilingual Bangla and English experience with mobile-first responsive layouts.",
+      "Course listings, detailed syllabus pages, free and paid enrollment flows, and subscription-ready monetization.",
+      "Live class access through Zoom or Google Meet with enrolled-student validation, reminders, and attendance logs.",
+      "Recorded lesson delivery with authenticated access and paid-content protection.",
+      "Admin dashboard for users, courses, content, payments, revenue reporting, analytics, team profiles, and CMS-managed pages.",
+      "Event and Olympiad registration with payment support, confirmation flow, and certificate generation with unique verification IDs.",
+      "One-to-one mentorship subscriptions with scheduling, mentor assignment, session history, renewals, and plan limits.",
+    ],
+    architecture: [
+      "Frontend: Next.js with server-side rendering for SEO and performance.",
+      "Backend: API-driven MERN or Laravel architecture with JWT-based authentication.",
+      "Database: MongoDB for user and activity data, with MySQL for transactions and reporting.",
+      "Integrations: bKash, Nagad, Zoom, Google Meet, analytics, CDN, and daily backup infrastructure.",
+    ],
+    roadmap: [
+      "AI-based astronomy tutor.",
+      "Olympiad problem-solving assistant.",
+      "Interactive sky simulation tools.",
+      "Global SaaS subscription expansion.",
+    ],
+  },
+  {
     title: "Full-featured Clothing E-commerce Platform",
     slug: "clothing-ecommerce-platform",
     description:
@@ -26,22 +69,6 @@ export const projectData = [
     tech: ["React", "Tailwind CSS", "REST API", "Express.js", "MongoDB"],
     demo: "https://rong-bd-admin.vercel.app/",
     repo: "https://github.com/Nayem-khan1/rong-bd-admin.git",
-  },
-  {
-    title: "MaxReward - Multi-role Reward and Merchant Platform",
-    slug: "maxreward-platform",
-    description:
-      "Developed a multi-role dashboard (Member, Merchant, Admin) with QR-based workflows, referral hierarchy (30 levels), voucher/point distribution flows, and role-based route protection.",
-    image: "/image/projects/MaxReward.png",
-    tech: [
-      "React",
-      "Tailwind CSS",
-      "REST API",
-      "Role-based Access Control",
-      "QR Workflow",
-    ],
-    demo: "https://maxreward-frontend-latest.vercel.app/",
-    repo: "",
   },
   {
     title: "Personal Portfolio",

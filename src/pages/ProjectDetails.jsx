@@ -8,6 +8,11 @@ const ProjectDetails = () => {
   const navigate = useNavigate();
   const sectionRef = useRef(null);
   const project = projectData.find((item) => item.slug === slug);
+  const hasExtendedDetails =
+    project?.overview ||
+    project?.highlights?.length ||
+    project?.architecture?.length ||
+    project?.roadmap?.length;
 
   useEffect(() => {
     if (!sectionRef.current) {
@@ -28,10 +33,10 @@ const ProjectDetails = () => {
           404 - Project Not Found
         </h1>
         <button
-          onClick={() => navigate("/projects")}
+          onClick={() => navigate("/#projects")}
           className="bg-primary text-black px-6 py-2 rounded-full hover:bg-white hover:text-primary transition"
         >
-          {"<- Back to All Projects"}
+          {"<- Back to Home"}
         </button>
       </main>
     );
@@ -52,6 +57,58 @@ const ProjectDetails = () => {
 
         <div className="text-gray-300 text-lg leading-relaxed space-y-6">
           <p>{project.description}</p>
+
+          {hasExtendedDetails && (
+            <div className="space-y-8">
+              {project.overview && (
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Project Overview:
+                  </h3>
+                  <p>{project.overview}</p>
+                </div>
+              )}
+
+              {project.highlights?.length ? (
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Key Features:
+                  </h3>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {project.highlights.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+
+              {project.architecture?.length ? (
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    System Architecture:
+                  </h3>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {project.architecture.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+
+              {project.roadmap?.length ? (
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Future Scope:
+                  </h3>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {project.roadmap.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+          )}
 
           <div>
             <h3 className="text-xl font-semibold text-white mb-2">
@@ -95,10 +152,10 @@ const ProjectDetails = () => {
 
         <div className="text-center mt-16">
           <button
-            onClick={() => navigate("/projects")}
+            onClick={() => navigate("/#projects")}
             className="mt-4 bg-primary text-black px-6 py-2 rounded-full hover:bg-white hover:text-primary transition"
           >
-            {"<- Back to Projects"}
+            {"<- Back to Home"}
           </button>
         </div>
       </section>

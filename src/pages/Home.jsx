@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import ProjectCard from "../components/ProjectCard";
 import ContactForm from "../components/ContactForm";
 import BlogCard from "../components/BlogCard";
-import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { blogData } from "../data/blogs";
 import Hero from "../components/Hero";
-import Projects from "./Projects";
+import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Encryption from "../components/Encryption";
 
@@ -46,7 +44,7 @@ const Home = () => {
         },
       }
     );
-    // GSAP scroll reveal for blogs section
+
     gsap.fromTo(
       blogsRef.current,
       { y: 40, opacity: 0 },
@@ -91,20 +89,14 @@ const Home = () => {
         <Encryption />
       </section>
 
-      {/* Blogs Section */}
       <section
         id="blog"
         ref={blogsRef}
         className=" max-w-screen-2xl mx-auto px-4 md:px-10 2xl:px-0 py-16 z-[20] relative "
       >
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-4xl font-bold text-primary mb-10 text-center"
-        >
+        <h2 className="text-4xl font-bold text-primary mb-10 text-center">
           Latest Blog Posts
-        </motion.h2>
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogData.slice(0, 3).map((blog) => (

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import {
   slideInFromTop,
   slideInFromLeft,
@@ -11,25 +11,25 @@ import { HiSparkles } from "react-icons/hi2";
 const SkillText = () => {
   return (
     <div className="w-full h-auto flex flex-col items-center justify-center">
-      <motion.div
+      <Motion.div
         variants={slideInFromTop}
         className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
       >
         <HiSparkles className="text-[#b49bff] mr-[10px] h-5 w-5" />
         <h1 className="Welcome-text text-[13px]">Frontend + MERN Skillset</h1>
-      </motion.div>
-      <motion.div
+      </Motion.div>
+      <Motion.div
         variants={slideInFromLeft(0.5)}
         className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]"
       >
         Building scalable products with modern web technologies
-      </motion.div>
-      <motion.div
+      </Motion.div>
+      <Motion.div
         variants={slideInFromRight(0.5)}
         className="cursive text-[20px] text-gray-200 mb-10 mt-[10px] text-center"
       >
         React, TypeScript, Next.js, Node.js, Express.js, MongoDB
-      </motion.div>
+      </Motion.div>
     </div>
   );
 };

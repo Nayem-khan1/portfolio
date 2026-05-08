@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 const ScrollToTopButton = () => {
   const [visible, setVisible] = useState(false);
@@ -28,7 +28,7 @@ const ScrollToTopButton = () => {
   if (!visible) return null;
 
   return (
-    <motion.button
+    <Motion.button
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -37,7 +37,7 @@ const ScrollToTopButton = () => {
       aria-label="Scroll to Top"
     >
       <FaArrowUp />
-    </motion.button>
+    </Motion.button>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import {
   slideInFromTop,
   slideInFromLeft,
@@ -9,13 +9,13 @@ import { HiSparkles } from "react-icons/hi2";
 
 const HeroContent = () => {
   return (
-    <motion.div
+    <Motion.div
       initial="hidden"
       animate="visible"
       className="max-w-screen-2xl mx-auto md:flex md:flex-row md:items-center md:justify-center mt-30 md:mt-40 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
-        <motion.div
+        <Motion.div
           variants={slideInFromTop}
           className="hidden md:flex Welcome-box py-[8px] px-[12px] border border-[#7042f88b] opacity-[0.9] items-center"
         >
@@ -23,9 +23,9 @@ const HeroContent = () => {
           <h1 className="Welcome-text text-[13px]">
             Full-stack MERN Developer
           </h1>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div
+        <Motion.div
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-3 mt-6 text-3xl md:text-6xl font-bold text-white w-auto md:max-w-[760px] h-auto"
         >
@@ -38,9 +38,9 @@ const HeroContent = () => {
           <span className="text-lg md:text-2xl font-medium text-gray-300">
             Full-stack MERN Developer (frontend-focused)
           </span>
-        </motion.div>
+        </Motion.div>
 
-        <motion.p
+        <Motion.p
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[800px]"
         >
@@ -48,9 +48,9 @@ const HeroContent = () => {
           user-friendly SaaS and e-commerce platforms with React, Next.js,
           TypeScript, and Tailwind CSS. I also build full-stack MERN solutions
           with secure authentication and API-driven architecture.
-        </motion.p>
+        </Motion.p>
 
-        <motion.div
+        <Motion.div
           className="mt-6 flex flex-wrap gap-4"
           variants={slideInFromLeft(1)}
         >
@@ -84,10 +84,10 @@ const HeroContent = () => {
           >
             Contact Me
           </a>
-        </motion.div>
+        </Motion.div>
       </div>
 
-      <motion.div
+      <Motion.div
         variants={slideInFromRight(0.8)}
         className="hidden w-full h-full md:flex justify-center items-center"
       >
@@ -96,8 +96,8 @@ const HeroContent = () => {
           alt="work icons"
           className="md:max-w-[450px] xl:max-w-[600px] h-auto"
         />
-      </motion.div>
-    </motion.div>
+      </Motion.div>
+    </Motion.div>
   );
 };
 

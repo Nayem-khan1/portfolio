@@ -31,7 +31,7 @@ const BlogDetails = () => {
           The blog post you are looking for does not exist.
         </p>
         <button
-          onClick={() => navigate("/blog")}
+          onClick={() => navigate("/#blog")}
           className="bg-primary text-black px-5 py-2 rounded-full hover:bg-white hover:text-primary transition"
         >
           Back to Blog
@@ -74,10 +74,10 @@ const BlogDetails = () => {
 
         <div className="mt-12 text-center">
           <button
-            onClick={() => navigate("/blog")}
+            onClick={() => navigate("/#blog")}
             className="bg-primary text-black px-6 py-2 rounded-full hover:bg-white hover:text-primary transition"
           >
-            {"<- Back to All Blogs"}
+            {"<- Back to Blog"}
           </button>
         </div>
       </section>

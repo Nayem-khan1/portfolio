@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const SkillDataProvider = ({ src, width, height, index }) => {
@@ -14,7 +14,7 @@ const SkillDataProvider = ({ src, width, height, index }) => {
 
   const animationDelay = 0.3;
   return (
-    <motion.div
+    <Motion.div
       ref={ref}
       initial="hidden"
       variants={imageVariants}
@@ -23,7 +23,7 @@ const SkillDataProvider = ({ src, width, height, index }) => {
       transition={{ delay: index * animationDelay }}
     >
       <img src={src} width={width} height={height} alt="skill image" />
-    </motion.div>
+    </Motion.div>
   );
 };
 
